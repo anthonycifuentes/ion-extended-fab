@@ -1,0 +1,26 @@
+ion-fab {
+    ion-button {
+        height: 56px;
+        width: 56px;
+        --padding-end: 0;
+        --padding-start: 0;
+        transition: all .3s ease-out;
+        span {
+            display: none;
+            font-weight: bold;
+        }
+        ion-icon {
+            font-size: 30px;
+        }
+        &.extended {
+            width: 154px;
+            span {
+                margin-right: 8px;
+                display: block;
+            }
+            ion-icon {
+                margin-right: 8px;
+            }
+        }
+    }
+}

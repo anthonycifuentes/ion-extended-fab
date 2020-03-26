@@ -1,20 +1,25 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="tertiary">
     <ion-title>
-      Blank
+      Inbox
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content [fullscreen]="true" [scrollEvents]="true" (ionScroll)="logScrolling($event)">
+  <ion-list>
+    <ion-list-header>
+      Today
+    </ion-list-header>
+    <ion-item *ngFor="let contact of contacts">
+      <ion-avatar slot="start">
+        <img [src]="contact.picture">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{contact.name}}</h2>
+        <p>{{contact.message}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
+<app-extended-fab [extended]="extended"></app-extended-fab>
