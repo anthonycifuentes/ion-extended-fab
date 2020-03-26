@@ -9,10 +9,10 @@ Custom extended fab component developed with IONIC v5.
 
 ### Installation
 
-Install the dependencies and devDependencies and start the server.
+Install the dependencies
 
 ```sh
-$ cd ion-slide-drawer
+$ cd ion-extended-fab
 $ npm install 
 $ ionic serve
 ```
